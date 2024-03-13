@@ -9,14 +9,20 @@ public class Vertice{
     public Vertice padre;
     public Vertice camino;
     public Vector3 posicion;
+    public bool visitado;
 
     public Vertice(int newId, Vector3 newPos) {
         this.id = newId;
         this.posicion = newPos;
+        this.visitado = false;
     }
 
     public void setPadre(Vertice padre) {
         this.padre = padre;
+    }
+
+    public void Visitar() {
+        this.visitado = true;
     }
 
     public void AgregarVecino(Vertice newVertice) {
